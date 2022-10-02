@@ -1,24 +1,22 @@
 package edu.lernia.labb5;
 
-//extends BoardGameMaterial
-
 public class Die {
-    public int value = 0;
+    int value = 0;
 
-    public Die() {
+    protected Die() {
         value = (int) Math.random();
     }
 
-    public int DieRoll() {
+    protected int DieRoll() {
         value = (int)(Math.random()*6+1);
         return value;
     }
 
-    public int DieReroll() {
+    protected int DieReroll() {
         return DieRoll();
     }
 
-    public String getString() {
+    protected String getString() {
         return "Dice shows " + value;
     }
 }
