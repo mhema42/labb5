@@ -1,6 +1,8 @@
 package edu.lernia.labb5;
 
-public class Die extends BoardGameMaterial {
+//extends BoardGameMaterial
+
+public class Die {
     public int value = 0;
 
     public Die() {

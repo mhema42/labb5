@@ -2,13 +2,6 @@ package edu.lernia.labb5;
 
 import org.junit.jupiter.api.Test;
 
-import edu.lernia.labb5.Die;
-
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
-import static org.junit.jupiter.api.Assertions.*;
-
 public class YatziTest {
     @Test
     void isYatziWhenAllDiceMatches() {
