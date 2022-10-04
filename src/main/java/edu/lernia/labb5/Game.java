@@ -39,9 +39,9 @@ public class Game {
         
         for(int i = 0; i < 5; i++) {
             dice[i] = new Die();
-//            dice[i].DieRoll();
+            dice[i].DieRoll(); //random # on dices
             
-            dice[i].value = 5; //Test if yatzi work
+//            dice[i].value = 5; //same # to test if yatzi work
             
             System.out.println(i + ": " + dice[i].getString());
         }    	     
