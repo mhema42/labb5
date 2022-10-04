@@ -1,24 +1,48 @@
 package edu.lernia.labb5;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
 
 public class YatziTest {
+	Die[] dice = new Die[5];
+		
     @Test
-    void isYatziWhenAllDiceMatches() {
-        Die[] dice = new Die[5];
-        for(Die die: dice) {
-            die.value = 6;
+    void isYatziWhenAllDiceMatches() {    	       
+        for(int i = 0; i < 5; i++) {
+            dice[i] = new Die();        
+            dice[i].value = 6;
+        } 
+
+        boolean yatzi = true;
+        
+        for(int j = 1; j < 5; j++) {
+        	if(dice[j].value != dice[j-1].value) {
+        		yatzi = false;
+        		break;
+        	}
         }
-        //Assert something?
+                
+        assertEquals(yatzi, true);
     }
 
     @Test
     void isNotYatziWhenOneDieIsNotMatchingTheOther() {
-        Die[] dice = new Die[5];
-        for(Die die: dice) {
-            die.value = 6;
+        for(int i = 0; i < 5; i++) {
+            dice[i] = new Die();        
+            dice[i].value = 6;
         }
-        dice[5].value = 1;
-        //Assert something?
+        dice[1].value = 1;
+
+        boolean yatzi = true;
+        
+        for(int j = 1; j < 5; j++) {
+        	if(dice[j].value != dice[j-1].value) {
+        		yatzi = false;
+        		break;
+        	}
+        }
+	    
+	    assertEquals(yatzi, false);
     }
 }
